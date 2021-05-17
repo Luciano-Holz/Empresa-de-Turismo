@@ -1,0 +1,168 @@
+
+<style>
+  section {
+    width: 1200px;
+    margin:10px auto;
+    background-color: #fff;
+    border: 1px solid gray;
+  }
+
+  .titulo {
+     background-color: #363636;
+     color: #FFF;
+  }
+
+  h1 {
+    display: inline;
+    margin: 10px 0 10px 15px;
+  }
+
+
+  .viagem {
+    width: 100px;
+    height: 40px;
+    background-color: green;
+    color: white;
+    margin: 10px 0 10px 400px;
+    cursor: pointer;
+  }
+
+  .carro {
+    width: 100px;
+    height: 40px;
+    background-color: blue;
+    color: white;
+    margin: 10px 0 10px 100px;
+    cursor: pointer;
+  }
+  
+ 
+
+  th {
+    background-color: gray;
+    color:#fff;
+    font-size: 12px;
+    width: 110px;
+    height: 40px;
+    margin: 0 5px;
+  }
+  td {
+    font-size: 14px;
+    width: 110px;
+    height: 35px;
+    font-weight: 500;
+    margin: 0 5px;
+    text-align: center;
+    
+  }
+  
+  .id {
+    width: 50px;
+  }
+
+  .cadastrar {
+    width: 90px;
+    height: 40px;
+    margin: 2px 30px 2px 20px;
+    background-color: blue;
+    color: white;
+    float: right;
+    cursor: pointer;
+  }
+
+  .impar{
+    background-color: palegreen;
+  }
+  .par {
+    background-color: lightsalmon;
+  }
+
+   .btnEditar {
+    display: inline;
+    width: 60px;
+    height: 30px;
+    float: right;
+    margin: 5px 0;
+    background-color: goldenrod;
+    cursor: pointer;
+  }
+
+  .btnDeletar {
+    display: inline;
+    width: 60px;
+    height: 30px;
+    float: right;
+    margin: 5px 10px;
+    background-color: red;
+    cursor: pointer;
+  }
+
+  #conteudo {
+    border-bottom: 1px solid gray;
+  }
+</style>
+    
+<section>
+
+    
+    
+    <div class="titulo">
+      <h1>Tabela de Motoristas</h1>
+
+      <a  href="/viagem/{{dataValues.id}}"><button class="btn viagem">Viagens</button></a>
+
+      <a  href="/carro/{{dataValues.id}}"><button class="btn carro">Carros</button></a><br>
+     
+    </div>
+ 
+  <div>
+   <table>
+    <tr>
+      <a  href="/cad-motorista/{{dataValues.id}}"><button class="btn cadastrar">Cadastrar</button></a>
+      <th class="id">ID</th>
+      <th>NOME</th>
+      <th>NASCIDO</th>
+      <th>SEXO</th>
+      <th>TELEFONE</th>
+      <th>RUA</th>
+      <th>NUMERO</th>
+      <th>BAIRRO</th>
+      <th>CIDADE</th>
+      <th>UF</th>
+      <th>CADASTRO</th>
+    
+    </tr>
+    </table>
+  </div>
+
+
+ 
+
+  {{#each motorista}}
+
+    <div id="conteudo">
+    <table >
+        <tr >
+          <td class="impar id">{{id}}</td>
+          <td class="par">{{dataValues.nome}}</td>
+          <td class="impar">{{dataValues.dataNasc}}</td>
+          <td class="par">{{dataValues.sexo}}</td>
+          <td class="impar">{{dataValues.telefone}}</td>
+          <td class="par">{{dataValues.rua}}</td>
+          <td class="impar">{{dataValues.numero}}</td>
+          <td class="par">{{dataValues.bairro}}</td>
+          <td class="impar">{{dataValues.cidade}}</td>
+          <td class="par">{{dataValues.uf}}</td>
+          <td class="impar">{{#formatDate createdAt}}{{/formatDate}}</td>
+        </tr>
+          <a href="/del-motorista/{{dataValues.id}}"><button class="btnDeletar">Deletar</button></a>
+
+          <a href="/edit-motorista/{{dataValues.id}}"><button class="btnEditar">Editar</button></a>
+        
+      </table>
+        
+    </div>
+  
+  {{/each}}
+
+</section>

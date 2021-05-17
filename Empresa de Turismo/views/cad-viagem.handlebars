@@ -1,0 +1,72 @@
+
+<style>
+
+  section {
+    background-color: lawngreen;
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  h1{
+    padding: 10px 0 5px 10px;
+  }
+
+  div {
+    margin-left: 70px ;
+  }
+
+  label {
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  input {
+    width: 300px;
+    height: 30px;
+  }
+
+  button {
+    background-color: green;
+    width: 80px;
+    height: 30px;
+    margin: 5px 50px 15px 350px;
+  }
+
+
+</style>
+<section>
+  <h1>Formulário para Cadastrar Viagens</h1>
+  <form action="/add-viagem" method="POST">
+    <div>
+      <label for="">Destino</label><br>
+      <input type="text" name="destino" placeholder="Digite o destino da viagem">
+    </div>
+
+    <div>
+      <label for="">Saída</label><br>
+      <input type="text" name="saida" placeholder="Digite a data de saida YY/MM/DD">
+    </div>
+
+    <div>
+      <label for="">Retorno</label><br>
+      <input type="text" name="retorno" placeholder="Digite a data de saida YY/MM/DD">
+    </div>
+
+    <div>
+      <label for="">IdMotorista</label><br>
+      <input type="text" name="IdMotorista" placeholder="Digite o Id do motorista">
+    </div>
+
+    <div>
+      <label for="">IdCarro</label><br>
+      <input type="text" name="idCarro" placeholder="Digite o Id do carro">
+    </div>
+
+    </div>
+
+    <button type="submit">Cadastrar</button>
+
+  </form>
+</section>
+

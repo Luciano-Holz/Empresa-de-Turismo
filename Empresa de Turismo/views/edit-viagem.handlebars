@@ -1,0 +1,72 @@
+
+<style>
+
+  section {
+    background-color: sandybrown;
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  h1{
+    padding: 10px 0 5px 10px;
+  }
+
+  div {
+    margin-left: 70px ;
+  }
+
+  label {
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  input {
+    width: 300px;
+    height: 30px;
+  }
+
+  button {
+    background-color: goldenrod;
+    width: 80px;
+    height: 30px;
+    margin: 5px 50px 15px 350px;
+  }
+
+
+</style>
+<section>
+  <h1>Formulário para Editar Viagens</h1>
+  <form action="/add-viagem" method="POST">
+    <input type="hidden" name="id" value="{{viagem.id}}">
+    <div>
+      <label for="">Destino</label><br>
+      <input type="text" name="destino" value="{{viagem.destino}}">
+    </div>
+
+    <div>
+      <label for="">Saída</label><br>
+      <input type="text" name="saida" value="{{viagem.saida}}">
+    </div>
+
+    <div>
+      <label for="">Retorno</label><br>
+      <input type="text" name="retorno" value="{{viagem.retorno}}">
+    </div>
+
+    <div>
+      <label for="">IdMotorista</label><br>
+      <input type="text" name="idMotorista" value="{{viagem.idMotorista}}">
+    </div>
+
+    <div>
+      <label for="">IdCarro</label><br>
+      <input type="text" name="idCarro" value="{{viagem.idCarro}}">
+    </div>
+
+
+    <button type="submit">Confirmar</button>
+
+  </form>
+</section>
+

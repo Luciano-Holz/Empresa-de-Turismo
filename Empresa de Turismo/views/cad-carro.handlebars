@@ -1,0 +1,67 @@
+
+
+<style>
+
+  section {
+    background-color: dodgerblue;
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  h1{
+    padding: 10px 0 5px 10px;
+  }
+
+  div {
+    margin-left: 70px ;
+  }
+
+  label {
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  input {
+    width: 300px;
+    height: 30px;
+  }
+
+  button {
+    background-color: #363636;
+    color: white;
+    width: 80px;
+    height: 30px;
+    margin: 5px 50px 15px 350px;
+  }
+
+
+</style>
+<section>
+  <h1>Formulário para Cadastrar Carros</h1>
+  <form action="/add-carro" method="POST">
+    <div>
+      <label for="">Modelo</label><br>
+      <input type="text" name="modelo" placeholder="Digite o modelo do carro">
+    </div>
+
+    <div>
+      <label for="">Passageiros</label><br>
+      <input type="text" name="passageiros" placeholder="Digite o numero de passageiros">
+    </div>
+
+    <div>
+      <label for="">Fabricação</label><br>
+      <input type="text" name="dataFab" placeholder="Digite a data de fabricação do carro YY/MM/DD">
+    </div>
+
+    <div>
+      <label for="">Placa</label><br>
+      <input type="text" name="placa" placeholder="Digite a placa do carro">
+    </div>
+
+    
+    <button type="submit">Cadastrar</button>
+
+  </form>
+</section>
